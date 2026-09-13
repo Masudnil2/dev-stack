@@ -11,3 +11,42 @@
     theme("colors.brand.violet") 100%
   );
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+}
+
+.bg-brand-gradient {
+  background-image: var(--brand-gradient);
+}
+
+.text-brand-gradient {
+     background-image: var(--brand-gradient);
+   background-clip: text;
+     -webkit-background-clip: text;
+  color: transparent;
+}
+
+.border-brand-gradient {
+    border-image: var(--brand-gradient) 1;
+}
+
+
+  button:focus-visible,
+input:focus-visible {
+     outline: 2px solid theme("colors.brand.pink");
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+        animation-duration: 0.01ms ;
+    animation-iteration-count: 1 ;
+      transition-duration: 0.01ms ;
+    scroll-behavior: auto ;
+  }
+}

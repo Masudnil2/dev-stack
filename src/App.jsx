@@ -1,14 +1,18 @@
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
+import TechGrid from "./components/TechGrid.jsx";
+import YourStack from "./components/YourStack.jsx";
+import Footer from "./components/Footer.jsx";
+import useStack from "./hooks/useStack.js";
 
 export default function App() {
-const { stack, isInStack, addToStack, removeFromStack, removeAll } =
+  const { stack, isInStack, addToStack, removeFromStack, removeAll } =
     useStack();
 
   return (
-    <>
-      
     <div className="min-h-screen bg-slate-50">
       <Navbar />
       <Hero />
@@ -35,9 +39,11 @@ const { stack, isInStack, addToStack, removeFromStack, removeAll } =
           />
         </div>
       </main>
-      </div>
-    </>
-  )
+
+      <Footer />
+
+      <ToastContainer position="bottom-right" autoClose={2500} newestOnTop />
+    </div>
+  );
 }
 
-export default App
