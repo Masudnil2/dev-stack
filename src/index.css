@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --brand-gradient: linear-gradient(
+    90deg,
+    theme("colors.brand.orange") 0%,
+    theme("colors.brand.pink") 50%,
+    theme("colors.brand.violet") 100%
+  );
+}
